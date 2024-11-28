@@ -1,0 +1,51 @@
+{% extends "app/layout.html" %}
+{% block content %}
+{% load static %}
+{% if form != None %}
+<!--<div class="overlay"></div>--> <!-- Полупрозрачная пленка -->
+<div class="content">
+    <br>
+    <h2>Заполните форму заказа</h2>
+    <br>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+            {{ form.name }}<br><br>
+            <label for="{{ form.city.id_for_label }}">{{ form.city.label }}:</label>
+            {{ form.city }}<br><br>
+            <label for="{{ form.pizza.id_for_label }}">{{ form.pizza.label }}:</label><br>
+            {{ form.pizza }}<br><br>
+            <label for="{{ form.pay.id_for_label }}">{{ form.pay.label }}:</label>
+            {{ form.pay }}<br><br>
+            <label for="{{ form.notice.id_for_label }}">{{ form.notice.label }}:</label>
+            {{ form.notice }}<br><br>
+            <label for="{{ form.email.id_for_label }}">{{ form.email.label }}:</label>
+            {{ form.email }}<br><br>
+            <label for="{{ form.message.id_for_label }}">{{ form.message.label }}:</label>
+            {{ form.message }}<br><br>
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+</div>
+{% else %}
+<div class="overlay"></div> <!-- Полупрозрачная пленка -->
+<div class="content">
+    <br>
+    <h2>Благодарим за заказ!</h2>
+    <h3>Вы ввели следующие данные:</h3>
+    <ul>
+        <li><span>Имя:</span> {{ data.name }}</li>
+        <li><span>Адресс:</span> {{ data.city }}</li>
+        <li><span>Пицца:</span> {{ data.pizza }}</li>
+        <li><span>Способ оплаты:</span> {{ data.pay }}</li>
+        <li>
+            <span>Получать сообщения от данного сайта:</span>
+            {{ data.notice }}
+        </li>
+        <li><span>Ваш e-mail:</span> {{ data.email }}</li>
+        <li><span>Пожелания:</span>{{ data.message }}</li>
+    </ul>
+    {% endif %}
+</div>
+{% endblock %}

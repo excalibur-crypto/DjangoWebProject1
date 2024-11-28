@@ -1,0 +1,293 @@
+@import url('site.css');
+body {
+    background-image: url('87.jpg');
+    padding-top: 150px;
+    padding-bottom: 20px;
+    position: relative; /* Для наложения */
+}
+.content {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+a 
+{
+    color: black;
+    text-decoration-color: red;
+}
+h5 {
+    color: aqua;
+    font-size: 30px;
+}
+
+.overlay {
+    position: fixed; /* Зафиксировано относительно окна браузера */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный налет */
+    z-index: 2; /* Наложение на фон */
+}
+/*.navbar-brand span {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #000 !important;
+}*/
+
+/*.navbar-btn {
+    font-size: 20px;
+    line-height: 50px;
+    padding: 0 15px;
+    color: #000 !important;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+*/
+.content {
+    position: relative; /* Чтобы текст был выше налета */
+    font-family: 'Times New Roman', sans-serif;
+    z-index: 8; /* Текст выше налета */
+    padding: 20px; /* Отступы для текста */
+    /*text-align: center;*/ /* Центрирование текста */
+}
+.navbar {
+    z-index: 10;
+    background: #ffcc00;
+}
+
+.navbar a {
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер шрифта */
+    padding-top: 20px;
+    padding-bottom: 10px;
+    align-items: center;
+    padding: 10px; /* Отступы вокруг текста */
+}
+.navbar-brand {
+    padding: 0;
+}
+.navbar a:hover {
+    border: 2px solid #ffcc00; /* Цвет и стиль рамки при наведении */
+    border-radius: 5px; /* Закругление углов рамки */
+}
+
+.read-more {
+    color: #007bff; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 16px; /* Размер шрифта */
+    padding: 10px 15px; /* Отступы вокруг текста */
+    border: 2px solid #007bff; /* Рамка вокруг ссылки */
+    border-radius: 5px; /* Закругление углов рамки */
+    display: inline-block; /* Чтобы рамка корректно обрамляла текст */
+    transition: background-color 0.3s, border 0.3s; /* Плавный переход для фона и рамки */
+}
+
+
+.read-more:hover {
+    background-color: #e7f1ff; /* Цвет фона при наведении */
+    border-color: #0056b3; /* Цвет рамки при наведении */
+}
+.navbar-nav > li > a {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+href
+{
+    color: aliceblue
+}
+
+ol li 
+{
+    color: black;
+    font-weight: 700;
+}
+h2
+{
+    color: black;
+}
+div
+{
+    color: black;
+}
+p {
+    font-size: 20px;
+    font-family: 'Czizh Body', sans-serif;
+    color: black;
+    line-height: 170%;
+    text-indent: 30px
+}
+.pic {
+    display: flex;
+    flex-wrap: wrap 
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.carousel {
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    position:page 
+}
+
+
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+h1 {
+    margin-bottom: 20px;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+}
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.product-details {
+    padding: 20px;
+}
+.product-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #333;
+}
+.product-description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+.product-price {
+    font-size: 1.2em;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,19 @@
+{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+<!--<div class="overlay"></div>--> <!-- Полупрозрачная пленка -->
+<div class="content">
+    <!--<link rel="icon" href="{% static 'img/favicon(1).ico' %}" />-->
+    <h1>{{ title }}.</h1>
+    <hr />
+    <div>
+        <h2>Видео-ролик 1</h2>
+        <VIDEO src="/media/ВКУСНЕЙШАЯ ПИЦЦА ЗА 30 СЕКУНД.mp4" controls="controls" width="400" height="300" poster="/media/caption_hvArkw7.jpg"></VIDEO>
+    </div>
+    <hr />
+    <div>
+        <h2>Видео ролик 2</h2>
+        <VIDEO src="/media/РЕЦЕПТ ПИЦЦЫ.mp4" controls="controls" width="400" height="300" poster="/media/caption.jpg"></VIDEO>
+    </div>
+    </div>
+    {% endblock %}

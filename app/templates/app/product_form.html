@@ -1,0 +1,12 @@
+﻿{% extends "app/layout.html" %}
+{% block title %}Create Product{% endblock %}
+
+{% block content %}
+<h1>Create Product</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn-primary">Save</button>
+</form>
+<a href="{% url 'product_list' %}">Back to Product List</a>
+{% endblock %}

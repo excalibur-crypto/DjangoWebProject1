@@ -1,0 +1,23 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load static %}
+<!--<div class="overlay"></div>--> <!-- Полупрозрачная пленка -->
+<div class="content">
+    <!--<link rel="icon" href="{% static 'img/favicon(1).ico' %}" />-->
+    <h2>{{ title }}.</h2>
+    <h3>{{ message }}</h3>
+
+    <address>
+        Фирма<br />
+        Псков ул. Ротная, д 37<br />
+        <abbr title="Phone">Телефон:</abbr>
+        8-800-555-35-35
+    </address>
+
+    <address>
+        <a href="https://momentopizza.ru/blog/top-12-interesnyx-faktov-o-piczcze/">Топ-12 интересных фактов о пицце</a>
+        <br><a href="https://wowitaly.ru/istoriya-pizzi/">История пиццы</a></br>
+    </address>
+    </div>
+    {% endblock %}

@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+{% load static %}
+<!--<div class="overlay"></div>--> <!-- Полупрозрачная пленка -->
+<div class="content">
+    <link rel="icon" href="{% static 'img/favicon(1).ico' %}" />
+    <h2>{{ title }}</h2>
+    <br />
+    {% for post in posts %}
+    <hr />
+    <div class="">
+        <h2> {{post.title}} </h2>
+        <h4> {{post.posted}} </h4>
+        <p> {{post.description}} </p>
+        <p>{{ post.short_content|linebreaks }}</p>
+        <p><a href="{% url 'blogpost' parametr=post.id %}"> ЧИТАТЬ ДАЛЕЕ </a>
+    </div>
+    {% endfor %}
+</div>
+    {% endblock %}

@@ -1,0 +1,23 @@
+{% extends "app/layout.html" %}
+
+{% block title %}Product List{% endblock %}
+
+{% block content %}
+<h1>Product List</h1>
+<a href="{% url 'product_create' %}">Create New Product</a>
+<div class="product-list">
+    {% for product in products %}
+    <div class="product-card">
+       
+        <div class="product-details">
+            <img src="{{ product.image.url }}" alt="Pictures" width="200" />
+            <h2 class="product-title">{{ product.title }}</h2>
+            <p class="product-description">{{ product.description }}</p>
+            <p class="product-price">${{ product.price }}</p>
+            <button class="btn-primary">Add to Cart</button>
+            <a href="{% url 'product_delete' product.pk %}" class="btn-danger">Delete</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+    <!--<link rel="icon" href="{% static 'img/favicon(1).ico' %}" />-->
+<div class="content">
+    <h10>Добавить статью</h10>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            {{ blogform.as_p }}
+            <button type="submit" class="save btn btn_default"> Сохранить статью </button>
+        </div>
+    </form>
+</div>
+    {% endblock %}
